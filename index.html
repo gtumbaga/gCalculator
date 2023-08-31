@@ -5,63 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>gCalculator</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles.css?ver=v0.004">
-    <!-- version: v0.004 -->
+    <link rel="stylesheet" href="./css/styles.css?ver=v0.005">
+    <!-- version: v0.005 -->
     <script src="./js/math.js"></script>
-    <script src="./js/script.js?ver=v0.004" /></script>
+    <script src="./js/script.js?ver=v0.005" /></script>
 </head>
 <body ontouchstart="() => {}">
     <div class="frame">
         <div class="inner">
             <div class="row">
                 <div class="col col5">
-                    <h3>Calculator</h3>
+                    <h3 class="noselect">Calculator</h3>
                     <input type="text" id="exp" onkeyup="handoleKeyup(event)" onkeydown="handleKeydown(event)" />
                 </div>
             </div>
 
             <div class="row">
                 <div class="col col1"> <button id="r1c1" class="btn">(</button> </div>
-                <div class="col col1"> <button class="btn" onclick="pressButton(')')">)</button> </div>
-                <div class="col col1"> <button class="btn" onclick="pressButton('%')">%</button> </div>
+                <div class="col col1"> <button id="r1c2" class="btn">)</button> </div>
+                <div class="col col1"> <button id="r1c3" class="btn">%</button> </div>
                 <div class="col col1">
-                    <button id="btn-BS" class="btn hide" onclick="pressButton('bs', true)">&leftarrow;</button>
-                    <button id="btn-AC" class="btn" onclick="pressButton('bs', true)">AC</button>
+                    <button id="btn-BS" class="btn hide">&leftarrow;</button>
+                    <button id="btn-AC" class="btn">AC</button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('7')">7</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('8')">8</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('9')">9</button> </div>
-                <div class="col col1"> <button class="btn" onclick="pressButton('/', true)">&div;</button> </div>
+                <div class="col col1"> <button id="r2c1" class="btn dark">7</button> </div>
+                <div class="col col1"> <button id="r2c2" class="btn dark">8</button> </div>
+                <div class="col col1"> <button id="r2c3" class="btn dark">9</button> </div>
+                <div class="col col1"> <button id="r2c4" class="btn" >&div;</button> </div>
             </div>
 
             <div class="row">
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('4')">4</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('5')">5</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('6')">6</button> </div>
-                <div class="col col1"> <button class="btn" onclick="pressButton('*', true)">&times;</button> </div>
+                <div class="col col1"> <button id="r3c1" class="btn dark">4</button> </div>
+                <div class="col col1"> <button id="r3c2" class="btn dark">5</button> </div>
+                <div class="col col1"> <button id="r3c3" class="btn dark">6</button> </div>
+                <div class="col col1"> <button id="r3c4" class="btn" >&times;</button> </div>
             </div>
 
             <div class="row">
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('1')">1</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('2')">2</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('3')">3</button> </div>
-                <div class="col col1"> <button class="btn" onclick="pressButton('-', true)">&minus;</button> </div>
+                <div class="col col1"> <button id="r4c1" class="btn dark">1</button> </div>
+                <div class="col col1"> <button id="r4c2" class="btn dark">2</button> </div>
+                <div class="col col1"> <button id="r4c3" class="btn dark">3</button> </div>
+                <div class="col col1"> <button id="r4c4" class="btn">&minus;</button> </div>
             </div>
 
             <div class="row">
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('0')">0</button> </div>
-                <div class="col col1"> <button class="btn dark" onclick="pressButton('.')">.</button> </div>
-                <div class="col col1"> <button class="btn calc" onclick="calc()">&equals;</button> </div>
-                <div class="col col1"> <button class="btn" onclick="pressButton('+', true)">&plus;</button> </div>
+                <div class="col col1"> <button id="r5c1" class="btn dark">0</button> </div>
+                <div class="col col1"> <button id="r5c2" class="btn dark">.</button> </div>
+                <div class="col col1"> <button id="r5c3" class="btn calc">&equals;</button> </div>
+                <div class="col col1"> <button id="r5c4" class="btn">&plus;</button> </div>
             </div>
 
 
         </div>
     </div>
-    <label id="ver">ver: v0.004</label>
+    <label id="ver" class="noselect">ver: v0.005</label>
 
     <script src="./js/listeners.js" /></script>
 </body>
