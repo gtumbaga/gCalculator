@@ -6,9 +6,9 @@
     <title>gCalculator</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <!-- version: 0.2 -->
-    <script src="./js/math.js?ver=0.2"></script>
-    <script src="./js/script.js?ver=0.2" /></script>
+    <!-- version: v0.3 -->
+    <script src="./js/math.js?ver=v0.3"></script>
+    <script src="./js/script.js?ver=v0.3" /></script>
 </head>
 <body ontouchstart="() => {}">
     <div class="frame">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="row">
-                <div class="col col1"> <button class="btn" onclick="pressButton('(')">(</button> </div>
+                <div class="col col1"> <button id="r1c1" class="btn">(</button> </div>
                 <div class="col col1"> <button class="btn" onclick="pressButton(')')">)</button> </div>
                 <div class="col col1"> <button class="btn" onclick="pressButton('%')">%</button> </div>
                 <div class="col col1">
@@ -61,5 +61,8 @@
 
         </div>
     </div>
+    <label id="ver">ver: v0.3</label>
+
+    <script src="./js/listeners.js" /></script>
 </body>
 </html>
