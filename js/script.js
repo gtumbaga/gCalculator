@@ -57,7 +57,7 @@ const showButton_AC = () => {
     document.getElementById('btn-BS').classList.add('hide');
 }
 
-const handleRealKeypress = (e) => {
+const handoleKeyup = (e) => {
     //console.log('real key pressed', e);
     //console.log('current value', e.target.value);
     if (e.keyCode == 13) {
@@ -70,7 +70,7 @@ const handleRealKeypress = (e) => {
         showButton_BS();
     }
 }
-const handleRealKeypressFilter = (e) => {
+const handleKeydown = (e) => {
     console.log('real key pressed', e.key);
 
     const specialKeys = [
