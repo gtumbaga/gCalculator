@@ -3,6 +3,9 @@ body {
     font-size: 20px;
     font-family: arial, sans-serif;
     background: #ccc;
+
+    width: 100vw;
+    height: 100vh;
 }
 body * {
     box-sizing: border-box;
