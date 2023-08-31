@@ -28,6 +28,10 @@ input {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #929d97;
     color: #333;
+    padding: 4px 10px;
+}
+input:focus {
+    outline: pink;
 }
 .row {
     margin-bottom: 10px;

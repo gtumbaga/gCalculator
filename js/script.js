@@ -5,6 +5,7 @@ const calc = () => {
     const exp = ele.value;
     console.log('rcvd expression: ', exp)
     showButton_AC();
+    lastPressed = '=';
 
     try {
         const answer = math.evaluate(exp);
@@ -12,8 +13,6 @@ const calc = () => {
 
     } catch (exceptionVar) {
         ele.value = 'error'
-    } finally {
-        lastPressed = '=';
     }
 
 }
@@ -56,4 +55,46 @@ const showButton_BS = () => {
 const showButton_AC = () => {
     document.getElementById('btn-AC').classList.remove('hide');
     document.getElementById('btn-BS').classList.add('hide');
+}
+
+const handleRealKeypress = (e) => {
+    //console.log('real key pressed', e);
+    //console.log('current value', e.target.value);
+    if (e.keyCode == 13) {
+        calc();
+    }
+
+    if (e.target.value.length <= 0) {
+        showButton_AC();
+    } else {
+        showButton_BS();
+    }
+}
+const handleRealKeypressFilter = (e) => {
+    console.log('real key pressed', e.key);
+
+    const specialKeys = [
+        '+', '-', '*', '/',
+        'Shift',
+        'Control',
+    ];
+
+    if ( (!specialKeys.includes(e.key)) && (lastPressed == '=') ) {
+        const ele = document.getElementById('exp');
+        ele.value = '';
+    }
+
+
+    const allowedKeys = [
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+        '.', '(', ')', '+', '-', '*', '/',
+        'Backspace', 'Shift', 'Control'
+    ];
+
+    if (allowedKeys.includes(e.key)) {
+        lastPressed = e.key;
+        return true;
+    } else {
+        e.preventDefault();
+    }
 }
