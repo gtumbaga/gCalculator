@@ -6,19 +6,16 @@
     <title>gCalculator</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/math.js"></script>
-    <script src="./js/script.js" /></script>
+    <!-- version: 0.2 -->
+    <script src="./js/math.js?ver=0.2"></script>
+    <script src="./js/script.js?ver=0.2" /></script>
 </head>
-<body>
+<body ontouchstart="() => {}">
     <div class="frame">
         <div class="inner">
             <div class="row">
                 <div class="col col5">
                     <h3>Calculator</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col5">
                     <input type="text" id="exp" onkeyup="handoleKeyup(event)" onkeydown="handleKeydown(event)" />
                 </div>
             </div>
